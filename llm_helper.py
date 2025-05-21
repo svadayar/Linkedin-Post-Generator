@@ -3,7 +3,11 @@ import os
 from dotenv import load_dotenv
 
 load_dotenv()
-llm = ChatGroq(groq_api_key=os.getenv("GROQ_API_KEY"), model_name="llama-3.2-90b-text-preview")
+
+api_key = os.getenv("GROQ_API_KEY")
+print("API Key:", api_key)  # For debugging
+
+llm = ChatGroq(groq_api_key=os.getenv("GROQ_API_KEY"), model_name="llama3-8b-8192")
 
 
 if __name__ == "__main__":
